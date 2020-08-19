@@ -17,7 +17,6 @@ else:
   )
 
 
-
 app = Flask(__name__)
 tokenizer = T5Tokenizer.from_pretrained('t5_model/')
 model = T5ForConditionalGeneration.from_pretrained('t5_model/')
