@@ -1,4 +1,4 @@
-# T5 Summariser REST API
+# T5 Podcast Summariser REST API
 
 This project is a quick and simple REST API to generate summaries using a T5 model fine-tuned on the Spotify Podcasts Dataset..
 
