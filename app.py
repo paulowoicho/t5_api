@@ -4,10 +4,24 @@ import nltk
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 import string
+import gdown
+import os
+
+if os.path.isfile('t5_model/pytorch_model.bin'):
+  pass
+
+else:
+  gdown.download(
+    "https://drive.google.com/uc?id=1_16_KnESJO7Y46arbHa_DenuaCMuqLnF",
+    "t5_model/pytorch_model.bin",
+  )
+
+
 
 app = Flask(__name__)
 tokenizer = T5Tokenizer.from_pretrained('t5_model/')
 model = T5ForConditionalGeneration.from_pretrained('t5_model/')
+
 
 def clean_up(text):
   head, _ , _ = text.partition(' ---')
